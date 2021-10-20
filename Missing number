@@ -1,0 +1,26 @@
+package com.dinesh;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int a[] = new int[100];
+        System.out.println("enter length of the array: ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        System.out.println("enter the elements: ");
+        for (int i = 0; i < n; i++) {
+            a[i] = in.nextInt();
+        }
+        System.out.println("enter total length: ");
+        int num=in.nextInt();
+        int expected=num*((num+1)/2);
+        int sum=0;
+        for(int i:a){
+            sum+=i;
+        }
+        System.out.println("\n");
+        System.out.println(expected-sum+" is a missing number");
+    }
+}
