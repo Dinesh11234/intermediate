@@ -1,0 +1,38 @@
+package com.dinesh;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+public class Main {    
+public static void main(String[] args){      
+  int p;       
+ System.out.println("enter a length: ");      
+  Scanner in=new Scanner(System.in);      
+  int num=in.nextInt();       
+ int a[]=new int[num];     
+   System.out.println("enter the elements");      
+  for(int i=0;i<num;i++){       
+     a[i]=in.nextInt();     
+   }       
+ System.out.println(Arrays.toString(a));   
+     List<Integer> list=new ArrayList<>();   
+     List<Integer> list1=new ArrayList<>();   
+     List<Integer> merge=new ArrayList<>();      
+  for(int i=0;i<num;i++) {         
+   p=0;           
+ for (int j = 2; j <=a[i]/2 ; j++) {            
+    if (a[i] % j == 0) {             
+      p=1;                
+   list.add(a[i]);               
+     break;              
+  }          
+  }        
+   if(p==0){            
+   list1.add(a[i]);       
+    }     
+   }       
+ merge.addAll(list1);  
+ merge.addAll(list);       
+ System.out.println(merge);   
+ }   
+ }
